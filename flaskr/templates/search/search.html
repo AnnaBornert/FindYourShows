@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Search for a TV Show{% endblock %}</h1>
+{{ super() }}
+{% endblock %}
+
+
+{% block navbar %}
+<ul>
+    <li><a class="active" href="{{ url_for('search.search')}}">Search Show</a></li>
+    <li><a href="{{ url_for('search.get_trending')}}">Trending</a></li>
+    <li><a href="{{ url_for('search.get_popular')}}">Popular</a></li>
+    <li><a href="{{ url_for('search.get_top_rated')}}">Top rated</a></li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+
+    <form class="searchbar" method="post">
+    <input type="text" placeholder="Type here to do a new search" name="title" id="title">
+        <div>
+        <p>Or search your TV by genre:</p>
+  <input type="checkbox" id="action & adventure" name="action & adventure">
+  <label for="action & adventure">Action & Adventure</label>
+  <input type="checkbox" id="animation" name="animation">
+  <label for="animation">Animation</label>
+  <input type="checkbox" id="comedy" name="comedy">
+  <label for="comedy">Comedy</label>
+  <input type="checkbox" id="crime" name="crime">
+  <label for="crime">Crime</label>
+  <input type="checkbox" id="documentary" name="documentary">
+  <label for="documentary">Documentary</label>
+  <input type="checkbox" id="drama" name="drama">
+  <label for="drama">Drama</label>
+  <input type="checkbox" id="family" name="family">
+  <label for="family">Family</label>
+  <input type="checkbox" id="kids" name="kids">
+  <label for="kids">Kids</label>
+  <input type="checkbox" id="mystery" name="mystery">
+  <label for="mystery">Mystery</label>
+  <input type="checkbox" id="news" name="news">
+  <label for="news">News</label>
+  <input type="checkbox" id="reality" name="reality">
+  <label for="reality">Reality</label>
+  <input type="checkbox" id="sci-fi & fantasy" name="sci-fi & fantasy">
+  <label for="sci-fi & fantasy">Sci-fi & Fantasy</label>
+  <input type="checkbox" id="soap" name="soap">
+  <label for="soap">Soap</label>
+  <input type="checkbox" id="talk" name="talk">
+  <label for="talk">Talk</label>
+  <input type="checkbox" id="war & politics" name="war & politics">
+  <label for="war & politics">War & Politics</label>
+  <input type="checkbox" id="western" name="western">
+  <label for="western">Western</label>
+            </div>
+    <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+
+
+
+{% if session.get('last_show_name') %}
+<header><h1>You added {{ session.get('last_show_name') }} to your favs, you will probably also like...</h1></header>
+{% else %}
+<header><h1>Today's Trending</h1></header>
+{% endif %}
+
+{% endblock %}

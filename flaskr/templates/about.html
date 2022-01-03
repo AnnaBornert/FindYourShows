@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+
+{% block navbar %}
+<ul>
+    <li><a href="{{ url_for('search.search')}}">Search Show</a></li>
+    <li><a href="{{ url_for('search.get_trending')}}">Trending</a></li>
+    <li><a href="{{ url_for('search.get_popular')}}">Popular</a></li>
+    <li><a href="{{ url_for('search.get_top_rated')}}">Top rated</a></li>
+</ul>
+{% endblock %}
+
+
+{% block header %}
+<h1>{% block title %}Findyourshows{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<p>This site is powered by The Movie DataBase.</p>
+
+<img src="{{ url_for('static', filename='TMDB.png')}}" style="width:100px;margin:6px">
+{% endblock %}
