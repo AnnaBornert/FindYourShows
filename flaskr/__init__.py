@@ -45,9 +45,8 @@ def index():
 @app.route('/about', methods=('GET',))
 def about():
     """About page"""
-    return render_template('about.html') \
- \
- \
+    return render_template('about.html')
+
 @app.route('/error', methods=('GET',))
 def error():
     """Error occurance page"""
