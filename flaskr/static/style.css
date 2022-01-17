@@ -141,17 +141,6 @@ input[type=text]:focus, input[type=password]:focus {
   box-sizing: border-box;
 }
 
-/* Style the search field */
-form.searchbar input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  font-weight: lighter;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-  margin-bottom: 0em;
-}
 
 /* Style the submit button */
 form.searchbar button {
