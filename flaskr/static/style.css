@@ -137,7 +137,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* BARRE DE RECHERCHES
 ==========================*/
-{
+ {
   box-sizing: border-box;
 }
 
@@ -151,6 +151,10 @@ form.searchbar input[type=text] {
   background: #f1f1f1;
   margin-bottom: 0em;
 }
+
+
+
+
 
 /* Style the submit button */
 form.searchbar button {
@@ -169,8 +173,32 @@ form.searchbar button:hover {
   background: #0b7dda;
 }
 
+form.searchbar2 button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #25b7d3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.searchbar2 button:hover {
+  background: #0b7dda;
+}
+
+
+
 /* Clear floats */
 form.searchbar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+form.searchbar2::after {
   content: "";
   clear: both;
   display: table;
