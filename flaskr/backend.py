@@ -76,7 +76,7 @@ def shows_to_session():
     session['show_ids'] = shows
     return None
 
-#utile?
+
 
 def make_multi_requests(show_ids):
 

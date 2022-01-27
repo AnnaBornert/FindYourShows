@@ -7,32 +7,31 @@ They also can enable notifications whenever a new episode of one of their favour
 We deployed it on Heroku: <a href='https://findyourshows.herokuapp.com'> this address <a/>.
 
 ## Installation
-1. Install the Python `virtualenv` package: 
-
-	`pip install virtualenv`
-
-
-2. Download the projet directory. Once the files unzipped/downloaded, create a python virtual environment in the said directory: 
+1. Download the projet directory. Once the files unzipped/downloaded, create a python virtual environment in the said directory: 
 
 	`cd /project_directory`
 	
-	`virtualenv venv`
+	`python3 -m venv venv`
 	
-	`source venv/bin/activate`
+	Linux / MacOS: : `.venv/bin/activate`
+
+	Windows : `venv\Scripts\activate`
 
 
-3. From the same directory, install the app and its dependencies:
+2. From the same directory, install flask and requests:
 
-	`pip install -e findyourshows/`
+	`pip install flask`
+
+	`pip install requests`
   
   
 ## Running the MyFavShows
    
 1. Go to your virtualenv. Add the app to your environment variables:
 
-	Linux / MacOS:`export FLASK_APP=findyourshows`
+	Linux / MacOS:`export FLASK_APP=flaskr`
 	
-	Windows: `set FLASK_APP=myfavshows`
+	Windows: `set FLASK_APP=flaskr`
 
 2. Run the app:
 
